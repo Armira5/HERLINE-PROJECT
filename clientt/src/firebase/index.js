@@ -2,18 +2,12 @@ import { initializeApp } from "firebase/app";
 // import { getAuth, connectAuthEmulator } from "firebase/auth";
 // import { connectFunctionsEmulator, getFunctions } from "firebase/functions"
 const firebaseConfig = {
-  // apiKey: "AIzaSyDbC5C7OBTXulFY8omsTGqI1XpRfcJ1KdE",
-  // authDomain: "test-d131b.firebaseapp.com",
-  // projectId: "test-d131b",
-  // storageBucket: "test-d131b.appspot.com",
-  // messagingSenderId: "964160011114",
-  // appId: "1:964160011114:web:143cbd9e71f9b42fb1c313",
-  apiKey: "AIzaSyDD6JFUog-xt_wKe4EEqr6H8RQsXUJGDRM",
-  authDomain: "testt-ab297.firebaseapp.com",
-  projectId: "testt-ab297",
-  storageBucket: "testt-ab297.appspot.com",
-  messagingSenderId: "216067792496",
-  appId: "1:216067792496:web:777964d06a1d9fd1e1deb5",
+  apiKey: "AIzaSyCZzE8gcc84ewvfAQTaZUSe0I_t3ygNh6c",
+  authDomain: "vue-fire-auth-74f30.firebaseapp.com",
+  projectId: "vue-fire-auth-74f30",
+  storageBucket: "vue-fire-auth-74f30.appspot.com",
+  messagingSenderId: "61148941006",
+  appId: "1:61148941006:web:7ad0b63df3a9fb80031e9f"
 };
 
 const app = initializeApp(firebaseConfig);
