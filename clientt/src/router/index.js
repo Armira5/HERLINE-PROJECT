@@ -116,7 +116,6 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/public/AboutView.vue"),
-    meta:{requiresAuth: true}
   },
   // {
   //   path: "/create",

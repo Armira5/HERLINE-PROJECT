@@ -17,22 +17,22 @@
    <h2 class="title">Latest Products</h2>
                   <div class="col-4">
                     <div class="prd1">
-                        <img src="../../assets/pic2-2.jpg" height="260px">
+                        <img src="../../assets/pic2-2.jpg" height="260px" width="180">
                         <h4>Pink Polka Dot Dress</h4>
                         
                     </div>
                     <div class="prd1">
-                        <img src="../../assets/pic6.jpg" height="260px">
+                        <img src="../../assets/pic6.jpg" height="260px" width="180">
                         <h4>V-neck Mini Dress</h4>
                         
                    </div>
                    <div class="prd1">
-                        <img src="../../assets/pic7.jpg" height="260px">
+                        <img src="../../assets/pic7.jpg" height="260px" width="180">
                          <h4>Bottom Ruffle Dress</h4>
                        
                   </div>
                    <div class="prd1"> 
-                       <img src="../../assets/pic3-1.jpg" height="260px">
+                       <img src="../../assets/pic3-1.jpg" height="260px" width="180">
                         <h4>Shirt Dress</h4>
                         
                 </div>
@@ -55,7 +55,7 @@
                    
               </div>
                <div class="prd1"> 
-                   <img src="../../assets/heels4.jpg" height="260px" width="200">
+                   <img src="../../assets/heels4.jpg" height="260px" width="180">
                    <h4>Pink Lace Up Square Toe Heels</h4>
                
             </div>
@@ -167,6 +167,19 @@ h1{
   margin:6px;
   padding:10px;
   min-width:200px;
+  min-height: 270px;
+  margin-bottom:5%;
+  margin-left:15%;
+  font-size:small;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(54, 53, 53);
+}
+.col-4{
+  display: flex;
+  margin:6px;
+  padding:10px;
+  min-width:200px;
+  min-height: 270px;
   margin-bottom:5%;
   margin-left:15%;
   font-size:small;
