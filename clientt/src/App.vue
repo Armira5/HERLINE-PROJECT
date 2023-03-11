@@ -13,8 +13,10 @@ import Footer from './components/Footer.vue'
 import { getAuth, onAuthStateChanged } from '@firebase/auth';
   export default {
     components: {
-      Header
+      Header,
+      Footer
     },
+
     mounted() {
       this.$store.dispatch('fetchPosts');
 
@@ -24,6 +26,7 @@ import { getAuth, onAuthStateChanged } from '@firebase/auth';
       })
     }
   }
+
 </script>
 
 <!-- <style>
