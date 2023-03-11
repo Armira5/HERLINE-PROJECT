@@ -17,22 +17,22 @@
    <h2 class="title">Latest Products</h2>
                   <div class="col-4">
                     <div class="prd1">
-                        <img src="../../assets/pic2-2.jpg" height="260px" width="180">
+                        <img src="../../assets/pinky1.jpg" height="260px" width="180">
                         <h4>Pink Polka Dot Dress</h4>
                         
                     </div>
                     <div class="prd1">
-                        <img src="../../assets/pic6.jpg" height="260px" width="180">
+                        <img src="../../assets/pinky2.jpg" height="260px" width="180">
                         <h4>V-neck Mini Dress</h4>
                         
                    </div>
                    <div class="prd1">
-                        <img src="../../assets/pic7.jpg" height="260px" width="180">
+                        <img src="../../assets/pinky3.jpg" height="260px" width="180">
                          <h4>Bottom Ruffle Dress</h4>
                        
                   </div>
                    <div class="prd1"> 
-                       <img src="../../assets/pic3-1.jpg" height="260px" width="180">
+                       <img src="../../assets/pinky4.webp" height="260px" width="180">
                         <h4>Shirt Dress</h4>
                         
                 </div>
@@ -40,22 +40,22 @@
          
             <div class="col-5">
                 <div class="prd1">
-                     <img src="../../assets/heels1.jpg" height="260px" width="180">
+                     <img src="../../assets/shoresy5.webp" height="260px" width="180">
                      <h4>Hot Pink Block Sandals</h4>
                     
                 </div>
                <div class="prd1">
-                    <img src="../../assets/heels2.jpg" height="260px" width="180">
+                    <img src="../../assets//shoesy2.webp" height="260px" width="180">
                     <h4>Block Heeled Sandals</h4>
                    
                </div>
               <div class="prd1">
-                    <img src="../../assets/heels3.jpg" height="260px" width="180">
+                    <img src="../../assets/shoresy3.webp" height="260px" width="180">
                     <h4>Baby Pink Lace Up Stiletto</h4>
                    
               </div>
                <div class="prd1"> 
-                   <img src="../../assets/heels4.jpg" height="260px" width="180">
+                   <img src="../../assets/shoresy4.webp" height="260px" width="180">
                    <h4>Pink Lace Up Square Toe Heels</h4>
                
             </div>
@@ -185,6 +185,9 @@ h1{
   font-size:small;
   font-family: 'Poppins', sans-serif;
   color: rgb(54, 53, 53);
+}
+#a{
+  widht:360px;
 }
 </style>
 
