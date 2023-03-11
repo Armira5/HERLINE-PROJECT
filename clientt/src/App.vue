@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-300 h-screen overflow-y-hidden">
+  <div class="bg-slate-300 h-screen overflow-y-scroll">
     <Header />
     <router-view />
     <Footer />
