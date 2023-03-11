@@ -96,8 +96,9 @@
 
 
   <div class="py-3.5 px-6 shadow md:flex justify-between items-center bg-gray-800">
-    <div class="flex items-center cursor-pointer px-3">
-      <router-link to="/"><h1 class="text-white"><img class="h-11" src="../assets/logo-1.png" alt="Logo " ></h1></router-link>
+    <div class="flex items-left cursor-pointer px-3">
+      <router-link to="/"><h1 class="head__title">{{ title }}</h1>
+    <img class="head__logo" alt="Vue logo" src="../assets/logo.png"/></router-link>
     </div>
 
     <span class="absolute md:hidden right-6 top-1.5 cursor-pointer text-white" @click="MenuOpen()">
@@ -151,3 +152,14 @@ export default {
   }
 };
 </script>
+
+<style>
+ .head__title{
+        font-size: 2rem;
+    }
+    .head__logo{
+        max-width: 100px;
+        margin-left: 1rem;
+    }
+
+</style>
