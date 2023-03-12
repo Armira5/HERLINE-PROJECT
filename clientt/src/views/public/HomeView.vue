@@ -4,7 +4,7 @@
 
     <div class="fillimi">
     <div class="col2">
-      <h1>Give yourself new clothes!</h1>
+      <h1 style="font-size: 2em;">Give yourself new clothes!</h1>
          <p class="paragraph">LIFE IS SHORT <br>Make every outfit count</p>
          <a href="product.php" class="btn">Explore Now &#8594;</a>
      </div>

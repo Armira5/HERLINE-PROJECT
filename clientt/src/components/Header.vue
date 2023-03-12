@@ -95,7 +95,7 @@
 
 
 
-  <div class="py-3.5 px-6 shadow md:flex justify-between items-center bg-gray-800">
+  <div class="py-3.5 px-6 shadow md:flex justify-between items-center bg-red-300">
     <div class="flex items-left cursor-pointer px-3">
       <router-link to="/"><h1 class="head__title">{{ title }}</h1>
     <img class="head__logo" alt="Vue logo" src="../assets/logo.png"/></router-link>
@@ -107,7 +107,7 @@
       </svg>
     </span>
 
-    <ul class="md:flex md:items-center md:px-0 px-8 md:pb-0 pb-15 md:static absolute bg-gray-800 md:w-auto w-full top-14 duration-200 ease-in" :class="[open ? 'left-0 top-14 pb-5 z-10' : 'top-[-100%] left-0']">
+    <ul class="md:flex md:items-center md:px-0 px-8 md:pb-0 pb-15 md:static absolute bg-red-300 md:w-auto w-full top-14 duration-200 ease-in" :class="[open ? 'left-0 top-14 pb-5 z-10' : 'top-[-100%] left-0']">
       <li class=" md:my-0 my-6 pl-6"><router-link @click="MenuOpen()" to="/" class=" font-medium text-white dark:hover:text-gray-400">Home</router-link></li>
       <li v-if="userRole=='admin'" class=" md:my-0 my-6 pl-6"><router-link @click="MenuOpen()" to="/admin/dashboard"  class=" font-medium text-white dark:hover:text-gray-400">Admin</router-link></li>
       <li class=" md:my-0 my-6 pl-6"><router-link @click="MenuOpen()" to="/about" class=" font-medium text-white dark:hover:text-gray-400">About</router-link></li>
@@ -156,6 +156,7 @@ export default {
 </script>
 
 <style>
+
  .head__title{
         font-size: 2rem;
     }
