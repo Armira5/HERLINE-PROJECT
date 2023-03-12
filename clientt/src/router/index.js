@@ -19,7 +19,7 @@ const routes = [
     path: "/admin",
     name: "admin",
     component: AdminLayout,
-    meta: { requiresAuth: true, requiresAdmin: true },
+    // meta: { requiresAuth: true, requiresAdmin: true },
     children: [
       {
         path: "dashboard",
@@ -40,6 +40,27 @@ const routes = [
         component: () =>
           import(
             /* webpackChunkName: "createCase" */ "../views/admin/dresses/CreateDress.vue"
+          ),
+      },
+      {
+        path: "dashboard",
+        name: "dashboard",
+        component: Admin,
+      },
+      {
+        path: "shoes",
+        // name: "shoes",
+        component: () =>
+          import(
+            /* webpackChunkName: "cases" */ "../views/admin/shoes/Shoes.vue"
+          ),
+      },
+      {
+        path: "shoes/create",
+        name: "createShoes",
+        component: () =>
+          import(
+            /* webpackChunkName: "createCase" */ "../views/admin/shoes/CreateShoes.vue"
           ),
       },
     ],
@@ -67,6 +88,15 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/public/ProductView.vue"),
+  },
+  {
+    path: "/shoes",
+    name: "shoes",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/public/ShoesView.vue"),
   },
   // {
   //   path: "/create",

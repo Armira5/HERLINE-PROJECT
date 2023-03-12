@@ -10,6 +10,7 @@ import {
 import dressRouter from "./routes/dressRouter";
 import userRouter from"./routes/userRouter"
 import postRouter from "./routes/postRouter"
+import shoesRouter from "./routes/shoesRouter";
 const multer = require("multer");
 const path = require("path");
 
@@ -45,7 +46,12 @@ mongoose
       const filename = req.params.filename;
       res.sendFile(path.join(__dirname, "uploads/dresss", filename)); // Serve the photo file from the uploads folder
     });
+    app.get("/uploads/shoes/:filename", (req, res) => {
+      const filename = req.params.filename;
+      res.sendFile(path.join(__dirname, "uploads/shoes", filename)); // Serve the photo file from the uploads folder
+    });
     app.use("/dresses", dressRouter);
+    app.use("/shoes", shoesRouter);
     app.get("*", (req, res) => res.status(404).json({ content: "not_found" }));
 
     app.listen(API_PORT, () => {
