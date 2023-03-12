@@ -187,7 +187,7 @@ h1{
   color: rgb(54, 53, 53);
 }
 #a{
-  widht:360px;
+  width:360px;
 }
 </style>
 
