@@ -27,78 +27,20 @@ const routes = [
         component: Admin,
       },
       {
-        path: "/admin/case-management",
-        name: "cases",
+        path: "dresses",
+        // name: "dresses",
         component: () =>
           import(
-            /* webpackChunkName: "cases" */ "../views/admin/caseManagement/Cases.vue"
+            /* webpackChunkName: "cases" */ "../views/admin/dresses/Dresses.vue"
           ),
       },
       {
-        path: "/admin/case-management/create",
-        name: "createCase",
+        path: "dresses/create",
+        // name: "createDress",
         component: () =>
           import(
-            /* webpackChunkName: "createCase" */ "../views/admin/caseManagement/CreateCaseManagement.vue"
+            /* webpackChunkName: "createCase" */ "../views/admin/dresses/CreateDress.vue"
           ),
-      },
-      {
-        name: "editCase",
-        path: "/admin/case-management/edit/:id",
-        component: () =>
-          import("../views/admin/caseManagement/EditCaseManagement.vue"),
-      },
-      {
-        name: "transferCase",
-        path: "/admin/case-management/transfer/:id",
-        component: () =>
-          import("../views/admin/caseManagement/TransferCase.vue"),
-      },
-      {
-        name: "caseDetails",
-        path: "/admin/case-management/details/:id",
-        component: () =>
-          import("../views/admin/caseManagement/CaseDetails.vue"),
-      },
-      {
-        path: "evidence",
-        name: "evidence",
-        component: () => import("../views/admin/evidence/Evidences.vue"),
-      },
-      {
-        path: "evidence/create",
-        name: "creatEvidence",
-        component: () => import("../views/admin/evidence/CreateEvidence.vue"),
-      },
-      {
-        path: "evidence/edit/:id",
-        name: "editEvidence",
-        component: () => import("../views/admin/evidence/EditEvidence.vue"),
-      },
-      {
-        path: "evidence/transfer/:id",
-        name: "transferEvidence",
-        component: () => import("../views/admin/evidence/TransferEvidence.vue"),
-      },
-      {
-        path: "evidence/details/:id",
-        name: "detailsEvidence",
-        component: () => import("../views/admin/evidence/EvidenceDetails.vue"),
-      },
-      {
-        path: "users",
-        name: "users",
-        component: () => import("../views/admin/users/Users.vue"),
-      },
-      {
-        path: "transferedEvidences",
-        name: "transferedEvidences",
-        component: () => import("../views/admin/transferedEvidences.vue"),
-      },
-      {
-        path: "transferedCases",
-        name: "transferedCases",
-        component: () => import("../views/admin/transferedCases.vue"),
       },
     ],
   },

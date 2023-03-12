@@ -23,6 +23,7 @@ const store = createStore({
     transferedEvidences: [],
     transferedCases: [],
     userRole: '',
+    dresses:[],
   },
   getters: {
     userRole: (state) => {
@@ -69,6 +70,9 @@ const store = createStore({
     },
     setCases(state, caseees) {
       state.caseees = caseees;
+    },
+    setDresses(state, dresses) {
+      state.dresses = dresses;
     },
     setEvidences(state, evidences) {
       state.evidences = evidences;
@@ -181,6 +185,11 @@ const store = createStore({
       const res = await fetch("http://localhost:3000/cases");
       const caseees = await res.json();
       commit("setCases", caseees);
+    },
+    async fetchDresses({ commit }) {
+      const res = await fetch("http://localhost:3000/dresses");
+      const dresses = await res.json();
+      commit("setDresses", dresses);
     },
     async fetchEvidences({ commit }) {
       const res = await fetch("http://localhost:3000/evidences");

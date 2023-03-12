@@ -14,7 +14,7 @@ import { getAuth, onAuthStateChanged } from '@firebase/auth';
   export default {
     components: {
       Header,
-      Footer
+      // Footer
     },
 
     mounted() {

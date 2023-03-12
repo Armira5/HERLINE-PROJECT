@@ -7,11 +7,9 @@ import {
   MONGO_DB_NAME,
   MONGO_DB_PORT,
 } from "./config";
-import categoryRouter from "./routes/categoriesRouter";
-import postRouter from "./routes/postRouter";
-import userRouter from "./routes/userRouter";
-import caseRouter from "./routes/caseRouter";
-import evidenceRouter from "./routes/evidenceRouter" ;
+import dressRouter from "./routes/dressRouter";
+import userRouter from"./routes/userRouter"
+import postRouter from "./routes/postRouter"
 const multer = require("multer");
 const path = require("path");
 
@@ -40,31 +38,14 @@ mongoose
     const upload = multer({ storage: storage }).single("photo");
     // app.use("/")
     app.use(express.static("public"));
-    app.use("/categories", categoryRouter);
+    // app.use("/categories", categoryRouter);
     app.use("/users", userRouter);
     app.use("/posts", postRouter);
-    app.post("/upload",  (req, res) => {
-      upload(req,res,(err)=>{
-        if(err){
-          console.log(err)
-        }else{
-          console.log(req.body);
-          res.send("uploaded");
-        }
-        console.log(req.file.mimetype)
-      })
-      // res.status(200).json(req.body)
-    });
-    app.get("/uploads/evidences/:filename", (req, res) => {
+    app.get("/uploads/dresss/:filename", (req, res) => {
       const filename = req.params.filename;
-      res.sendFile(path.join(__dirname, "uploads/evidences", filename)); // Serve the photo file from the uploads folder
+      res.sendFile(path.join(__dirname, "uploads/dresss", filename)); // Serve the photo file from the uploads folder
     });
-    app.get("/uploads/cases/:filename", (req, res) => {
-      const filename = req.params.filename;
-      res.sendFile(path.join(__dirname, "uploads/cases", filename)); // Serve the photo file from the uploads folder
-    });
-    app.use("/cases", caseRouter);
-    app.use("/evidences", evidenceRouter);
+    app.use("/dresses", dressRouter);
     app.get("*", (req, res) => res.status(404).json({ content: "not_found" }));
 
     app.listen(API_PORT, () => {

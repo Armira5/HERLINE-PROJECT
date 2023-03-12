@@ -2,7 +2,6 @@
 
     
 
-    <p>{{ userRole }}</p>
     <div class="fillimi">
     <div class="col2">
       <h1>Give yourself new clothes!</h1>

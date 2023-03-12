@@ -111,7 +111,7 @@
       <li class=" md:my-0 my-6 pl-6"><router-link @click="MenuOpen()" to="/" class=" font-medium text-white dark:hover:text-gray-400">Home</router-link></li>
       <li v-if="userRole=='admin'" class=" md:my-0 my-6 pl-6"><router-link @click="MenuOpen()" to="/admin/dashboard"  class=" font-medium text-white dark:hover:text-gray-400">Admin</router-link></li>
       <li class=" md:my-0 my-6 pl-6"><router-link @click="MenuOpen()" to="/about" class=" font-medium text-white dark:hover:text-gray-400">About</router-link></li>
-      <li class=" md:my-0 my-6 pl-6"><router-link @click="MenuOpen()" to="/product" class=" font-medium text-white dark:hover:text-gray-400" v-if="!user">Product</router-link></li>
+      <li class=" md:my-0 my-6 pl-6"><router-link @click="MenuOpen()" to="/product" class=" font-medium text-white dark:hover:text-gray-400">Product</router-link></li>
       <li class=" md:my-0 my-6 pl-6"><router-link @click="MenuOpen()" to="/register" class=" font-medium text-white dark:hover:text-gray-400" v-if="!user">Register</router-link></li>
       <li class=" md:my-0 my-6 pl-6"><router-link @click="MenuOpen()" to="/login" class=" font-medium text-white dark:hover:text-gray-400" v-if="!user">Login</router-link></li>
       
