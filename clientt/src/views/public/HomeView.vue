@@ -12,6 +12,8 @@
         <img src="../../assets/pink.png" width=300px>
     </div>
    </div>
+   
+  
    <div class="slider-container">
   <img src="../../assets/n1.jpg" alt="Image 1" class="slider-image">
   <img src="../../assets/n2.jpg" alt="Image 2" class="slider-image">
@@ -19,7 +21,12 @@
   <img src="../../assets/n4.jpg" alt="Image 4" class="slider-image">
   <img src="../../assets/n5.jpg" alt="Image 4" class="slider-image">
   <img src="../../assets/n6.jpg" alt="Image 4" class="slider-image">
- 
+  <h2 class="slider-header">
+      Welcome to our online store! We are thrilled to have you here and can't wait to show you all the amazing products we have to offer. Our ecommerce platform is designed to make shopping online easy and convenient, so you can find what you need quickly and easily.
+
+Whether you're looking for fashion items, tech gadgets, home decor, or gifts for loved ones, we have it all. 
+    </h2>
+  
 </div>
 
 
@@ -361,7 +368,7 @@ h1{
 #a{
   width:360px;
 }
-/*.slider-container {
+/* .slider-container {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
@@ -387,15 +394,35 @@ h1{
 }
 */
 .slider-container {
+  display: flex;
   position: relative;
   width: 50%;
   height: 800px;
   overflow: hidden;
   margin-left: 100px;
-
- 
- 
 }
+
+
+.slider-container h2 {
+  background-color: #ffc0cb;
+  background-position: 12px;
+  box-shadow: #ffc0cb;
+   top: 12px;
+   left: 300px;
+   align-items: right;
+   position: absolute;
+   float: right;
+ 
+}    
+
+
+
+/* .slider-header {
+  align-items: left;
+  float: right;
+  /* margin-left: 10px; */
+/* } */ 
+
 
 .slider-image {
   position: absolute;
@@ -427,7 +454,8 @@ h1{
 @media (max-width: 768px) {
   /* Adjust height of slider container */
   .slider-container {
-    height: 300px;
+    height: 500px;
+    width: 500px;
   }
 }
 
