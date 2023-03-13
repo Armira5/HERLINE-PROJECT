@@ -1,9 +1,5 @@
 <template>
-    <h1>This is Product page</h1>
-    <div class="w-full sm:w-1/2 ">
-        <img v-bind:src="photoUrl" width="372px" height="372px" alt="Photo"
-             class="w-full h-auto object-fill  rounded-lg shadow-md">
-    </div>
+    <h1>This is Shoes page</h1>
     <div class="w-full sm:w-1/2 ">
         <img v-bind:src="shoesPhoto" width="372px" height="372px" alt="Photo"
              class="w-full h-auto object-fill  rounded-lg shadow-md">
@@ -14,8 +10,7 @@ import axios from "axios";
 export default {
     data() {
         return {
-            Dress: {},
-            shoes:{},
+            Shoes: {},
             // photoName:Dress.photoName,
         }
     },
@@ -33,22 +28,20 @@ export default {
         },
     },
     created() {
-        let apiURL = `http://localhost:3000/dresses/640d244ef662001d7798fbc0`;
+        let apiURL = `http://localhost:3000/shoes/640d244ef662001d7798fbc0`;
 
         axios.get(apiURL).then((res) => {
-            this.Dress = res.data;
+            this.Shoes = res.data;
             // console.log(res.data)
         });
-        axios.get("http://localhost:3000/shoes/").then((res)=>{
-            this.shoes = res.data;
-            console.log(this.shoes.photoName)
-        })
     },
     computed: {
         photoUrl() {
-            return `http://localhost:3000/uploads/dresss/${this.Dress.photoName}`; // Construct the photo URL
+            return `http://localhost:3000/uploads/shoes/${this.Shoes.photoName}`; // Construct the photo URL
         },
-       
+        shoesPhoto(){
+            return`http://localhost:3000/uploads/shoes/12032023_1748_shoess.jpg`
+        }
     }
 }
 </script>

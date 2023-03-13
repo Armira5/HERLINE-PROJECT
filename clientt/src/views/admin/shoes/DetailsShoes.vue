@@ -1,6 +1,6 @@
 <template>
     <div>
-        <router-link :to="`/admin/evidence`">
+        <router-link :to="`/admin/shoes`">
             <button type="button" class="bg-gray-800 text-white py-2 px-4 my-2 mx-2 rounded-lg">
                 Back
             </button>
@@ -11,31 +11,31 @@
             <img v-bind:src="photoUrl" width="372px" height="372px" alt="Photo" class="w-full h-[372px] object-fill  rounded-lg shadow-md">
           </div>
           <div class="w-full sm:w-1/2 pl-8 ">
-            <h2 class="text-3xl font-bold mb-2">Identifier: <span>{{ Evidence.identifier }}</span></h2>
+            <h2 class="text-3xl font-bold mb-2">Identifier: <span>{{ Shoes.identifier }}</span></h2>
             <div class="flex flex-col">
                 <div class="flex items-center mb-2">
-                    <span class="font-bold mr-2">CaseNumber:</span> {{ Evidence.caseNumber }}
+                    <span class="font-bold mr-2">CaseNumber:</span> {{ Shoes.caseNumber }}
                 </div>
                 <div class="flex items-center mb-2">
-                    <span class="font-bold mr-2">Description:</span> {{ Evidence.description }}
+                    <span class="font-bold mr-2">Description:</span> {{ Shoes.description }}
                 </div>
                 <div class="flex items-center mb-2">
-                    <span class="font-bold mr-2">Notes:</span> {{ Evidence.notes }}
+                    <span class="font-bold mr-2">Notes:</span> {{ Shoes.notes }}
                 </div>
                 <div class="flex items-center mb-2">
-                    <span class="font-bold mr-2">StorageLocation:</span> {{ Evidence.storageLocation }}
+                    <span class="font-bold mr-2">StorageLocation:</span> {{ Shoes.storageLocation }}
                 </div>
                 <div class="flex items-center mb-2">
-                    <span class="font-bold mr-2">HandlingInstructions:</span> {{ Evidence.handlingInstructions }}
+                    <span class="font-bold mr-2">HandlingInstructions:</span> {{ Shoes.handlingInstructions }}
                 </div>
                 <div class="flex items-center mb-2">
-                    <span class="font-bold mr-2">Created By:</span> {{ Evidence.createdBy }}
+                    <span class="font-bold mr-2">Created By:</span> {{ Shoes.createdBy }}
                 </div>
                 <div class="flex items-center">
                     <span class="font-bold mr-2">Date:</span> {{ formattedDate() }}
                 </div>
                 <div class="flex justify-end mt-12">
-                  <router-link :to="`/admin/evidence`">
+                  <router-link :to="`/admin/shoes`">
                       <button type="button" class="bg-gray-800 text-white py-2 px-4 my-2 mx-2 rounded-lg">
                           Back
                       </button>
@@ -52,12 +52,12 @@
 export default {
     data() {
         return {
-            Evidence:{},
+            Shoes:{},
         }
     },
     methods:{
         formattedDate() {
-            const date = this.Evidence.createdAt
+            const date = this.Shoes.createdAt
             const options = {
                 year: "numeric",
                 month: "long",
@@ -69,15 +69,15 @@ export default {
         },
     },
     created() {
-        let apiURL = `http://localhost:3000/evidences/${this.$route.params.id}`;
+        let apiURL = `http://localhost:3000/shoes/${this.$route.params.id}`;
 
         axios.get(apiURL).then((res) => {
-            this.Evidence = res.data;
+            this.Shoes = res.data;
         });
     },
     computed: {
         photoUrl() {
-            return `http://localhost:3000/uploads/evidences/${this.Evidence.photoName}`;
+            return `http://localhost:3000/uploads/shoes/${this.Shoes.photoName}`;
         }
     }
 }

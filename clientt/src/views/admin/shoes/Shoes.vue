@@ -18,7 +18,7 @@
                       </form>
                   </div>
                   <div class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
-                    <router-link to="/admin/evidence/create">
+                    <router-link to="/admin/shoes/create">
                       <button type="button" class="flex items-center justify-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                             </svg>
@@ -50,24 +50,24 @@
                           </tr>
                       </thead>
                       <tbody class="">
-                          <tr v-for="evidences in itemsToDisplay" :key="evidences.id" class="border-b dark:border-gray-700 overflow-x-scroll">
-                              <td class="px-4 py-3 dark:text-white truncate">{{ evidences.identifier}}</td>
-                              <td class="px-4 py-3 truncate">{{ evidences.caseNumber }}</td>
-                              <td class="px-4 py-3 truncate">{{ evidences.createdBy }}</td>
-                              <td class="px-4 py-3 truncate">{{ evidences.createdAt }}</td>
+                          <tr v-for="shoes in itemsToDisplay" :key="shoes.id" class="border-b dark:border-gray-700 overflow-x-scroll">
+                              <td class="px-4 py-3 dark:text-white truncate">{{ shoes.identifier}}</td>
+                              <td class="px-4 py-3 truncate">{{ shoes.caseNumber }}</td>
+                              <td class="px-4 py-3 truncate">{{ shoes.createdBy }}</td>
+                              <td class="px-4 py-3 truncate">{{ shoes.createdAt }}</td>
                               <td class="px-4 py-3 truncate text-right ">
-                                <router-link :to="`/admin/evidence/transfer/${evidences._id}`"  class="inline-flex items-center mr-3 px-3 py-2 text-sm font-medium text-center text-white bg-slate-600 hover:bg-slate-700 rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                <router-link :to="`/admin/shoes/transfer/${shoes._id}`"  class="inline-flex items-center mr-3 px-3 py-2 text-sm font-medium text-center text-white bg-slate-600 hover:bg-slate-700 rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
                                 </svg>Transfer</router-link>
-                                <router-link :to="`/admin/evidence/details/${evidences._id}`"  class="inline-flex items-center mr-3 px-3 py-2 text-sm font-medium text-center text-white bg-slate-600 hover:bg-slate-700 rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                <router-link :to="`/admin/shoes/details/${shoes._id}`"  class="inline-flex items-center mr-3 px-3 py-2 text-sm font-medium text-center text-white bg-slate-600 hover:bg-slate-700 rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>Details</router-link>
-                                <router-link :to="`/admin/evidence/edit/${evidences._id}`"  class="inline-flex items-center mr-3 px-3 py-2 text-sm font-medium text-center text-white bg-green-600 hover:bg-green-800 rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                <router-link :to="`/admin/shoes/edit/${shoes._id}`"  class="inline-flex items-center mr-3 px-3 py-2 text-sm font-medium text-center text-white bg-green-600 hover:bg-green-800 rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                 <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>Edit</router-link>
-                                <button type="button" @click="handleDeleteEvidence(evidences._id)" data-modal-toggle="delete-user-modal" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
+                                <button type="button" @click="handleDeleteShoes(shoes._id)" data-modal-toggle="delete-user-modal" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
                                   <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>Delete</button>
                               </td>
                           </tr>
@@ -77,9 +77,9 @@
               <nav class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0 p-4" aria-label="Table navigation">
                   <span class="text-sm font-normal text-gray-500 dark:text-gray-400">
                       Showing
-                      <span class="font-semibold text-gray-900 dark:text-white">1-{{ evidences.length < pageSize ? evidences.length : pageSize   }}</span>
+                      <span class="font-semibold text-gray-900 dark:text-white">1-{{ shoes.length < pageSize ? shoes.length : pageSize   }}</span>
                       of
-                      <span class="font-semibold text-gray-900 dark:text-white">{{ evidences.length }}</span>
+                      <span class="font-semibold text-gray-900 dark:text-white">{{ shoes.length }}</span>
                   </span>
                   <ul class="inline-flex items-stretch -space-x-px">
                       <li>
@@ -106,10 +106,10 @@ import { mapState } from "vuex";
 import axios from "axios"
 
 export default {
-  name:"Evidences",
+  name:"shoes",
   data() {
     return {
-      allevidences: [this.$store.dispatch("fetchEvidences")],
+      allshoes: [this.$store.dispatch("fetchshoes")],
       sortBy: 'createdAt',
       sortDirection: -1,
       ignoredProperties: ['_id', '__v'],
@@ -120,16 +120,16 @@ export default {
     };
   },
   methods: {
-    async handleDeleteEvidence(id) {
+    async handleDeleteShoes(id) {
       // console.log(this.fileName)
-      let apiURL = `http://localhost:3000/evidences/delete/${id}`;
-      let indexOfArrayItem = this.evidences.findIndex((i) => i._id === id);
-      let fileName = this.evidences[indexOfArrayItem].photoName
+      let apiURL = `http://localhost:3000/shoes/delete/${id}`;
+      let indexOfArrayItem = this.shoes.findIndex((i) => i._id === id);
+      let fileName = this.shoes[indexOfArrayItem].photoName
       console.log(fileName)
       if (window.confirm("Do you really want to delete?")) {
         try {
           await axios.put(apiURL, { data: { fileName } });
-          this.evidences.splice(indexOfArrayItem, 1);
+          this.shoes.splice(indexOfArrayItem, 1);
         } catch (error) {
           console.error(error);
         }
@@ -155,13 +155,13 @@ export default {
     }
   },
   computed: { 
-    ...mapState(["evidences"]),
-    filteredEvidences() {
-      return this.evidences
-        .filter((evidence) => {
-          const fields = ['identifier', 'createdBy', 'caseNumber', ]; // replace with actual fields
+    ...mapState(["shoes"]),
+    filteredshoes() {
+      return this.shoes
+        .filter((shoes) => {
+          const fields = ['name', 'brand', 'size', ]; // replace with actual fields
           for (const field of fields) {
-            if (evidence[field].toLowerCase().includes(this.searchKeyword.toLowerCase())) {
+            if (shoes[field].toLowerCase().includes(this.searchKeyword.toLowerCase())) {
               return true;
             }
           }
@@ -174,7 +174,7 @@ export default {
         });
     },
     totalPages() {
-      return Math.ceil(this.evidences.length / this.pageSize);
+      return Math.ceil(this.shoes.length / this.pageSize);
     },
     pagesToShow() {
       const maxPageButtons = 5;
@@ -194,11 +194,11 @@ export default {
     itemsToDisplay() {
       const startIndex = (this.currentPage - 1) * this.pageSize;
       const endIndex = startIndex + this.pageSize;
-      return this.filteredEvidences.slice(startIndex, endIndex);
+      return this.filteredshoes.slice(startIndex, endIndex);
     }
   },
   created() {
-    this.$store.dispatch("fetchEvidences");
+    this.$store.dispatch("fetchshoes");
   },
 };
 </script>
